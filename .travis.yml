@@ -1,4 +1,10 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: node_js
+node_js:
+- node
+before_install:
+  - npm i -g npm@version-number
+install:
+  - npm install
+script: npm test
+cache: 
+  npm: false
